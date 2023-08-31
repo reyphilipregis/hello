@@ -18,5 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
-   echo 'This is a test';
+   echo 'This is a test display from /test route';
 });

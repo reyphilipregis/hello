@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Message;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
@@ -28,4 +29,8 @@ Route::get('/test2', function () {
 
 Route::get('/test3', function () {
     echo 'This is a test display from /test3 route';
+});
+
+Route::get('/messages', function () {
+    return Message::all();
 });

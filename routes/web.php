@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,7 @@ Route::get('/', function () {
 Route::get('/test', function () {
    echo 'This is a test display from /test route';
 });
+
+Route::get('/test2', function () {
+    echo 'This is a test display from /test2 route';
+ });

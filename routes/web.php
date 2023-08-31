@@ -24,4 +24,8 @@ Route::get('/test', function () {
 
 Route::get('/test2', function () {
     echo 'This is a test display from /test2 route';
- });
+});
+
+Route::get('/test3', function () {
+    echo 'This is a test display from /test3 route';
+});

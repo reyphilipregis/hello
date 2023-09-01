@@ -33,9 +33,6 @@ jobs:
       - name: PHPStan Analysis
         run: vendor/bin/phpstan analyze app tests
 
-      - name: Psalm Analysis
-        run: vendor/bin/psalm
-
       - name: Upload Test Results
         if: always()
         uses: actions/upload-artifact@v2

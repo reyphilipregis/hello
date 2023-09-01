@@ -3,7 +3,7 @@ name: Laravel Tests
 on:
   push:
     branches:
-      - main  # Adjust this branch name to match your default branch
+      - master  # Adjust this branch name to match your default branch
 
 jobs:
   laravel_tests:

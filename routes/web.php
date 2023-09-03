@@ -35,6 +35,10 @@ Route::get('/test4', function () {
     echo 'This is a test display from /test4 route';
 });
 
+Route::get('/sample', function () {
+    
+});
+
 Route::get('/messages', function () {
     return Message::all();
 });

@@ -8,6 +8,7 @@ on:
 
 jobs:
   laravel-base:
+
     runs-on: ubuntu-latest
 
     steps:
@@ -29,24 +30,18 @@ jobs:
       run: chmod -R 777 storage bootstrap/cache
 
   laravel-tests:
+
     needs: laravel-base
 
     runs-on: ubuntu-latest
 
     steps:
-    - name: Create Database
-      run: |
-        mkdir -p database
-        touch database/database.sqlite
-        
-    - name: Execute tests (Unit and Feature tests) via PHPUnit
-      env:
-        DB_CONNECTION: sqlite
-        DB_DATABASE: database/database.sqlite
-      run: vendor/bin/phpunit
+    - uses: actions/checkout@v1
+    - uses: nathanheffley/laravel-phpunit-action@master
 
   deploy-application:
-    needs: laravel-base
+    
+    needs: laravel-tests
 
     runs-on: ubuntu-latest
 

@@ -39,6 +39,10 @@ Route::get('/test5', function () {
     echo 'This is a test display from /test5 route';
 });
 
+Route::get('/test6', function () {
+    echo 'This is a test display from /test6 route';
+});
+
 Route::get('/sample', function () {
     echo 'This is a sample route';
 });

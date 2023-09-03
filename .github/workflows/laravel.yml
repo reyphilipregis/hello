@@ -40,6 +40,13 @@ jobs:
         DB_DATABASE: database/database.sqlite
       run: vendor/bin/phpunit
 
+  deploy-application:
+
+    needs: laravel-tests
+
+    runs-on: ubuntu-latest
+
+    steps:
     - name: Generate deployment package
       run: zip -r deploy.zip . -x '*.git*'
 
